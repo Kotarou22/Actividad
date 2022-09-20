@@ -1,0 +1,28 @@
+<div class="container">
+  <section>
+    <fieldset>
+      <label>Rut alumno:</label>
+      <input type="number" name="rut" [value]="nuevoAlumno.rut" (input)="cambiarRut($event)">
+    </fieldset>
+    <fieldset>
+      <label>Nombre alumno:</label>
+      <input type="text" name="nombre" [value]="nuevoAlumno.nombre" (input)="cambiarNombre($event)">
+    </fieldset>
+    <fieldset>
+      <label>Apellido alumno:</label>
+      <input type="text" name="apellido" [value]="nuevoAlumno.apellido" (input)="cambiarApellido($event)">
+    </fieldset>
+    <fieldset>
+      <label>Edad alumno:</label>
+      <input type="number" name="edad" [value]="nuevoAlumno.edad" (input)="cambiarEdad($event)">
+    </fieldset>
+    <fieldset>
+      <label>Seccion alumno:</label>
+      <input type="text" name="seccion" [value]="nuevoAlumno.seccion" (input)="cambiarSeccion($event)">
+      <select >
+        <option value=""></option>
+      </select>
+    </fieldset>
+    <button type="button" role="button" (click)="guardarAlumno()">Enviar</button>
+  </section>
+</div>

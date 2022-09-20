@@ -1,0 +1,9 @@
+<div class="container">
+  <section>
+    <app-historial
+      *ngFor="let item of historiales"
+      [historial]="item"
+      (ruthistorial)="escucharHistorial($event)"
+    ></app-historial>
+  </section>
+</div>

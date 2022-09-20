@@ -1,0 +1,13 @@
+<div class="container">
+  <section>
+    <fieldset>
+      <label>Seccion:</label>
+      <input type="text" name="seccion" [value]="nuevaSeccion.siglas" (input)="cambiarSiglas($event)">
+    </fieldset>
+    <fieldset>
+      <label>Nombre de Seccion:</label>
+      <input type="text" name="nombreS" [value]="nuevaSeccion.nombreS" (input)="cambiarNombreS($event)">
+    </fieldset>
+    <button type="button" role="button" (click)="guardarSeccion()">Enviar</button>
+  </section>
+</div>

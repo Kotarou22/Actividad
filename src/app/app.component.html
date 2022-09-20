@@ -1,0 +1,14 @@
+<app-formulario-seccion
+  (salidaSeccion)="escucharSeccion($event)"
+></app-formulario-seccion>
+<app-formulario-alumno
+  (salidaAlumno)="escucharAlumno($event)"
+></app-formulario-alumno>
+<app-listar-alumno
+  [alumnos]="alumnosGuardados"
+  (posIndex)="borrarAlumno($event)"
+></app-listar-alumno>
+<app-listar-historial
+  [historiales]="historialesGuardados"
+  (posIndex)="borrarSeccion($event)"
+></app-listar-historial>

@@ -1,0 +1,20 @@
+<section>
+  <article>
+    <p *ngIf="alumno.rut ; else noRut">{{alumno.rut}}</p>
+    <ng-template #noRut>Sin un rut Registrado</ng-template>
+
+    <p *ngIf="alumno.nombre ; else noNombre">{{ alumno.nombre | uppercase}}</p>
+    <ng-template #noNombre>Sin un nombre Registrado</ng-template>
+
+    <p *ngIf="alumno.apellido ; else noApellido">{{ alumno.apellido | lowercase}}</p>
+    <ng-template #noApellido>Sin un apellido Registrado</ng-template>
+
+    <p *ngIf="alumno.edad ; else noEdad">{{ alumno.edad }}</p>
+    <ng-template #noEdad>Sin un edad Registrada</ng-template>
+
+    <p *ngIf="alumno.seccion ; else noSeccion"></p>
+    <ng-template #noSeccion>Sin un seccion Registrada</ng-template>
+
+    <button (click)="emitirRut()">Eliminar</button>
+  </article>
+</section>

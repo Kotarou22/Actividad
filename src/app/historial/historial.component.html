@@ -1,0 +1,14 @@
+<section>
+  <article>
+    <h2 *ngIf="historial.rut ; else noRut">{{historial.rut}}</h2>
+    <ng-template #noRut>Sin un rut Registrado</ng-template><br>
+
+    <h2 *ngIf="historial.fecha ; else noFecha">{{historial.fecha}}</h2>
+    <ng-template #noFecha>Sin una fecha Registrada</ng-template><br>
+
+    <h2 *ngIf="historial.hora ; else noHora"></h2>
+    <ng-template #noHora>Sin una hora Registrada</ng-template><br>
+
+    <button (click)="emitirHistorial()">Eliminar</button>
+  </article>
+</section>
